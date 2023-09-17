@@ -1,24 +1,47 @@
-﻿namespace AppListView;
+﻿using System.Collections.ObjectModel;
+
+namespace AppListView;
 
 public partial class MainPage : ContentPage
 {
-	int count = 0;
+    public class Pessoa
+    {
+        public string Nome { get; set; }
+        public string Idade { get; set; }
+    }
+    ObservableCollection<Pessoa> pessoas = new ObservableCollection<Pessoa>();
 
-	public MainPage()
-	{
-		InitializeComponent();
-	}
+    public MainPage()
+    {
+        InitializeComponent();
+        lsvLista.ItemsSource = pessoas;
+        pessoas.Add(new Pessoa
+        {
+            Nome = "Lucas",
+            Idade = "0"
+        });
+    }
 
-	private void OnCounterClicked(object sender, EventArgs e)
-	{
-		count++;
+    private void btnAdicionar_Clicked(object sender, EventArgs e)
+    {
+        string nome = txtIdade.Text;
+        string idade = txtIdade.Text;
 
-		if (count == 1)
-			CounterBtn.Text = $"Clicked {count} time";
-		else
-			CounterBtn.Text = $"Clicked {count} times";
-
-		SemanticScreenReader.Announce(CounterBtn.Text);
-	}
+        if (!string.IsNullOrEmpty(nome) &&
+            !string.IsNullOrEmpty(idade))
+        {
+            pessoas.Add(new Pessoa
+            {
+                Nome = nome,
+                Idade = idade
+            });
+            txtNome.Text = string.Empty;
+            txtIdade.Text = string.Empty;
+        }
+        else
+            DisplayAlert("Erro",
+                        "Pro favor, preencha o nome e a idade.",
+                        "Ok");
+    }
 }
 
