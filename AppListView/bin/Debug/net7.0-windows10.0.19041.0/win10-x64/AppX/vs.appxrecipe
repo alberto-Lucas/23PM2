@@ -29,25 +29,25 @@
     <AppXManifest Include="C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2023-09-17T23:24:44.506</Modified>
+      <Modified>2023-09-18T01:47:00.584</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2023-09-17T23:22:02.840</Modified>
+      <Modified>2023-09-18T01:47:00.218</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppListView.runtimeconfig.json">
       <PackagePath>AppListView.runtimeconfig.json</PackagePath>
-      <Modified>2023-09-17T23:05:32.004</Modified>
+      <Modified>2023-09-18T00:02:28.900</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\AppListView.dll">
       <PackagePath>AppListView.dll</PackagePath>
-      <Modified>2023-09-17T23:24:43.281</Modified>
+      <Modified>2023-09-18T01:46:58.937</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\apphost.exe">
       <PackagePath>AppListView.exe</PackagePath>
-      <Modified>2023-09-17T23:24:43.493</Modified>
+      <Modified>2023-09-18T01:46:59.510</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\microsoft.netcore.app.runtime.win-x64\7.0.3\runtimes\win-x64\lib\net7.0\Microsoft.CSharp.dll">
       <PackagePath>Microsoft.CSharp.dll</PackagePath>
@@ -909,6 +909,34 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
       <Modified>2022-11-08T19:31:22.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\pclext.filestorage\1.4.1.1\lib\netcoreapp2.0\PCLExt.FileStorage.Abstractions.dll">
+      <PackagePath>PCLExt.FileStorage.Abstractions.dll</PackagePath>
+      <Modified>2018-07-08T22:34:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\pclext.filestorage\1.4.1.1\lib\netcoreapp2.0\PCLExt.FileStorage.dll">
+      <PackagePath>PCLExt.FileStorage.dll</PackagePath>
+      <Modified>2018-07-08T22:34:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+      <Modified>2021-09-02T21:04:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2020-09-03T17:13:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netcoreapp3.1\SQLitePCLRaw.nativelibrary.dll">
+      <PackagePath>SQLitePCLRaw.nativelibrary.dll</PackagePath>
+      <Modified>2020-09-03T17:13:02.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2020-09-03T17:13:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlitepclraw.provider.dynamic_cdecl\2.0.4\lib\netstandard2.0\SQLitePCLRaw.provider.dynamic_cdecl.dll">
+      <PackagePath>SQLitePCLRaw.provider.dynamic_cdecl.dll</PackagePath>
+      <Modified>2020-09-03T17:13:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\microsoft.graphics.win2d\1.0.4\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2022-10-04T20:41:34.000</Modified>
@@ -917,9 +945,13 @@
       <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
       <Modified>2022-11-08T19:31:24.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\lucas\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win-x64\native\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2020-08-17T14:38:20.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\AppListView.deps.json">
       <PackagePath>AppListView.deps.json</PackagePath>
-      <Modified>2023-09-17T23:24:44.366</Modified>
+      <Modified>2023-09-18T01:47:00.448</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files\dotnet\packs\Microsoft.Maui.Controls.Ref.win\7.0.59\ref\net7.0-windows10.0.19041\Microsoft.Maui.Controls.Compatibility.pri">
       <PackagePath>Microsoft.Maui.Controls.Compatibility.pri</PackagePath>
