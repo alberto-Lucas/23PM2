@@ -217,7 +217,6 @@ C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\createdump.e
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostfxr.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\hostpolicy.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore.dll
-C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.323.6910.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordbi.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscorrc.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\msquic.dll
@@ -322,3 +321,12 @@ C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.t
 C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\qualifiers.txt.intermediate
 C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\MultipleQualifiersPerDimensionFound.txt
 C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\ProjectArchitectures.txt
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\PCLExt.FileStorage.Abstractions.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\PCLExt.FileStorage.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLite-net.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.batteries_v2.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.nativelibrary.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.core.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
+C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\mscordaccore_amd64_amd64_7.0.1023.36312.dll
