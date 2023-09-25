@@ -1,6 +1,7 @@
-namespace AppListView.Views;
 using AppListView.Controllers;
 using AppListView.Models;
+
+namespace AppListView.Views;
 
 public partial class pgCadPessoaView : ContentPage
 {
