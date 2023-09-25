@@ -901,6 +901,15 @@
     <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\dotnet_bot.scale-400.png">
       <PackagePath>dotnet_bot.scale-400.png</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash.scale-100.png">
+      <PackagePath>icon_trash.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash_10.scale-100.png">
+      <PackagePath>icon_trash_10.scale-100.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash_alt.scale-100.png">
+      <PackagePath>icon_trash_alt.scale-100.png</PackagePath>
+    </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>
     <ResolvedSDKReference Include="C:\Users\lucas\.nuget\packages\microsoft.windowsappsdk\1.2.221209.1\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.2.msix">

@@ -1,8 +1,6 @@
-﻿using System.Collections.ObjectModel;
-using System.Linq;
-using PCLExt.FileStorage.Folders;
-using SQLite;
-
+﻿using AppListView.Controllers;
+using AppListView.Models;
+using AppListView.Views;
 
 namespace AppListView;
 
@@ -11,89 +9,47 @@ public partial class MainPage : ContentPage
     //Instalar Nuget sqlite-net-pcl (icone pena)
     //Instalar Nuget pclext.filestorage
 
-    //Variavel responsavel pela conexao com o BD
-    private SQLiteConnection conexao;
+    //Passos para transformar em MVC
+    //---------------------------------------------------------------------------
+    //Primeira coisa criar uma pasta Models
+    //Mover nosso objto para Models
+    //Crie uma classe chamda Pessoa na pasta Models
+    //E mova a classe Pessoa para esse novo arquivo
+    //---------------------------------------------------------------------------
+    //Criar uma pasta chamada Services para armazenar
+    //A conexão com o BD
+    //Na pasta Srvices crie a classe DatabaseService
+    //Mova a conexão do BD para o novo arquivo
+    //---------------------------------------------------------------------------
+    //Criar uma pasta chamada Controllers
+    //Ira armazer as classes de manipulação de dados
+    //No caso do objeto Pessoa teremos a classe PessoaController
+    //Ira manipular o insert, update, delete e select no BD
+    //Mover o metodos de manipulação para o novo arquivo
+    //---------------------------------------------------------------------------
+    //Criar uma pasta Views para colocar as novas ContentPage
+    //Levar a tela de cadastro para uma nova pagina
+    //Deixar apenas a listView na mainPage
+    //---------------------------------------------------------------------------
 
-    //Removo a nossa coleção do objeto Pessoa
-    //ObservableCollection<Pessoa> pessoas = new ObservableCollection<Pessoa>();
-        
-    public class Pessoa
-    {
-        //Adiciona a propriedade Id e defino as propriedades
-        [PrimaryKey, AutoIncrement]
-        public int Id { get; set; }
-        public string Nome { get; set; }
-        public string Idade { get; set; }
-    }
+    //Importar o using AppListView.Controllers;
+    //Importar o using AppListView.Models;
+    //Importar o using AppListView.Views;
 
-    //Crio uma função para retornar a conexão com o BD
-    public SQLiteConnection GetConnection()
-    {
-        var folder = new LocalRootFolder();
-        //Definimos o nome do banco de dados
-        //Configuramos para caso o arquivo não exista seja criado
-        //Caso exista seja atualizado
-        var file = folder.CreateFile("list.db3", PCLExt.FileStorage.CreationCollisionOption.OpenIfExists);
-
-        //Retorna a conexao criada com o banco de dados
-        return new SQLiteConnection(file.Path);
-    }
+    //Criar instacia com a classe pessoaController
+    private PessoaController pessoaController = new PessoaController();
 
     public MainPage()
     {
         InitializeComponent();
-        //Removo a atribuição da coleção ao Source da lista
-        //lsvLista.ItemsSource = pessoas;
-        /*
-        pessoas.Add(new Pessoa
-        {
-            Nome = "Lucas",
-            Idade = "0"
-        });
-        */
 
-        //Abre a conexão com o BD
-        conexao = GetConnection();
-        //Mapear a classe para criação de tabela
-        conexao.CreateTable<Pessoa>(); 
+        //btnTeste.Source = urlIconTrash;
         AtualizarListView();
     }
 
     private void AtualizarListView()
     {
-        lsvLista.ItemsSource = conexao.Table<Pessoa>().ToList();
-    }
-
-    private void btnAdicionar_Clicked(object sender, EventArgs e)
-    {
-        string nome = txtNome.Text;
-        string idade = txtIdade.Text;
-
-        if (!string.IsNullOrEmpty(nome) &&
-            !string.IsNullOrEmpty(idade))
-        {
-            /*
-            pessoas.Add(new Pessoa
-            {
-                Nome = nome,
-                Idade = idade
-            });*/
-
-            conexao.Insert(new Pessoa 
-            { 
-                Nome = nome, 
-                Idade = idade 
-            });
-            
-            txtNome.Text = string.Empty;
-            txtIdade.Text = string.Empty;
-
-            AtualizarListView();
-        }
-        else
-            DisplayAlert("Erro",
-                        "Pro favor, preencha o nome e a idade.",
-                        "Ok");
+        lsvLista.ItemsSource = pessoaController.GetAll();
     }
 
     private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
@@ -132,10 +88,20 @@ public partial class MainPage : ContentPage
             {
                 // Implemente aqui a lógica para excluir o item da lista.
                 // Por exemplo, remova-o da fonte de dados da lista e atualize a ListView.
-                conexao.Delete(item);
+                pessoaController.Delete(item);
                 AtualizarListView(); // Atualize a ListView após a exclusão.
             }
         }
+    }
+
+    private void btnCadastrar_Clicked(object sender, EventArgs e)
+    {
+        Application.Current.MainPage.Navigation.PushAsync(new pgCadPessoaView());
+    }
+
+    private void btnAtualizar_Clicked(object sender, EventArgs e)
+    {
+        AtualizarListView();
     }
 }
 

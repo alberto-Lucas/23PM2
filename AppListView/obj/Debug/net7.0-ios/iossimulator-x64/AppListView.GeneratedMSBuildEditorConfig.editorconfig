@@ -39,3 +39,9 @@ build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = AppListView.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources\Styles\Styles.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources\Styles\Styles.xaml
+
+[C:/23PM2/AppListView/Views/pgCadPessoaView.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = AppListView.Views.pgCadPessoaView.xaml
+build_metadata.AdditionalFiles.TargetPath = Views\pgCadPessoaView.xaml
+build_metadata.AdditionalFiles.RelativePath = Views\pgCadPessoaView.xaml

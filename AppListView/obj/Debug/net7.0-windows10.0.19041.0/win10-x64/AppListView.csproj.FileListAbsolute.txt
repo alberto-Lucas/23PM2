@@ -330,3 +330,6 @@ C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\SQLitePCLRaw
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\e_sqlite3.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\PCLExt.FileStorage.Abstractions.dll
 C:\23PM2\AppListView\bin\Debug\net7.0-windows10.0.19041.0\win10-x64\PCLExt.FileStorage.dll
+C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash.scale-100.png
+C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash_alt.scale-100.png
+C:\23PM2\AppListView\obj\Debug\net7.0-windows10.0.19041.0\win10-x64\resizetizer\r\icon_trash_10.scale-100.png
