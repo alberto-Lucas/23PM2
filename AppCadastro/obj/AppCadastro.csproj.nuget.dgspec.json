@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\SIPM123\\AppCadastro\\AppCadastro.csproj": {}
+    "C:\\PM\\23PM2\\AppCadastro\\AppCadastro.csproj": {}
   },
   "projects": {
-    "C:\\SIPM123\\AppCadastro\\AppCadastro.csproj": {
+    "C:\\PM\\23PM2\\AppCadastro\\AppCadastro.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\SIPM123\\AppCadastro\\AppCadastro.csproj",
+        "projectUniqueName": "C:\\PM\\23PM2\\AppCadastro\\AppCadastro.csproj",
         "projectName": "AppCadastro",
-        "projectPath": "C:\\SIPM123\\AppCadastro\\AppCadastro.csproj",
+        "projectPath": "C:\\PM\\23PM2\\AppCadastro\\AppCadastro.csproj",
         "packagesPath": "C:\\Users\\Lucas\\.nuget\\packages\\",
-        "outputPath": "C:\\SIPM123\\AppCadastro\\obj\\",
+        "outputPath": "C:\\PM\\23PM2\\AppCadastro\\obj\\",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "fallbackFolders": [

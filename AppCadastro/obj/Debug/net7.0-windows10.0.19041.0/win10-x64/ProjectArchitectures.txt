@@ -1,1 +1,1 @@
-C:\SIPM123\AppCadastro\AppCadastro.csproj;x64
+C:\PM\23PM2\AppCadastro\AppCadastro.csproj;x64

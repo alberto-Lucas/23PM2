@@ -12,5 +12,8 @@
     <MauiXaml Update="Views\pgPrincipal.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\pgVisualizarBrinquedo.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
   </ItemGroup>
 </Project>
