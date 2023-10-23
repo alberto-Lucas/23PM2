@@ -12,5 +12,6 @@ namespace AppCadastro.Models
         public int IdadeMinima { get; set; }
         public decimal Preco { get; set; }
         public string  CodigoBarras { get; set; }
+        public string DirImagem { get; set; }
     }
 }
