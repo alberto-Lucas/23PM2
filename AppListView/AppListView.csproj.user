@@ -14,5 +14,8 @@
     <MauiXaml Update="Views\pgCadPessoaView.xaml">
       <SubType>Designer</SubType>
     </MauiXaml>
+    <MauiXaml Update="Views\pgVisualizarPessoaView.xaml">
+      <SubType>Designer</SubType>
+    </MauiXaml>
   </ItemGroup>
 </Project>

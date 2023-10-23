@@ -28,18 +28,54 @@
                                 Padding="10"
                                 Margin="5"
                                 BackgroundColor="#414142">
-                            <StackLayout>
-                                <Label Text="{Binding Id}"/>
-                                <Label Text="{Binding Nome}" 
-                                        FontAttributes="Bold"
-                                        FontSize="20"/>
-                                <StackLayout Orientation="Horizontal">
-                                    <Label Text="Idade:" Margin="0,0,2,0"/>
-                                    <Label Text="{Binding Idade}"/>
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout Padding="10" VerticalOptions="Center" 
+                                             HorizontalOptions="Start">
+                                    <Frame CornerRadius="100"
+                                           BackgroundColor="DarkOrange"
+                                           HeightRequest="100"
+                                           WidthRequest="100">
+                                        <Label Text="A"
+                                               HorizontalTextAlignment="Center"
+                                               VerticalTextAlignment="Center"
+                                               FontSize="80"
+                                               x:Name="lblSigla"/>
+                                    </Frame>
                                 </StackLayout>
-                                <Button Text="Deletar"
-                                        Clicked="btnDeletar_Clicked"
-                                        CommandParameter="{Binding .}"/>
+                                <StackLayout HorizontalOptions="StartAndExpand">
+                                    <Label Text="{Binding Id}"/>
+                                    <Label Text="{Binding Nome}" 
+                                            FontAttributes="Bold"
+                                            FontSize="20"/>
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label Text="Idade:" Margin="0,0,2,0"/>
+                                        <Label Text="{Binding Idade}"/>
+                                    </StackLayout>
+                                    <Button Text="Deletar"
+                                            Clicked="btnDeletar_Clicked"
+                                            CommandParameter="{Binding .}"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="End" Padding="20">
+                                    <Image Source="icon_trash.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Tapped="tapDeletar_Tapped"
+                                                CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Image Source="icon_eye_laranja.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30">       
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer 
+                                                Tapped="tapVisualizar_Tapped"
+                                                CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
                             </StackLayout>
                         </Frame>
                     </ViewCell>

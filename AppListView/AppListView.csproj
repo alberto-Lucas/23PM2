@@ -52,6 +52,8 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <None Remove="Resources\Images\icon_eye_laranja.png" />
+	  <None Remove="Resources\Images\icon_eye_roxo.png" />
 	  <None Remove="Resources\Images\icon_trash.png" />
 	  <None Remove="Resources\Images\icon_trash_10.png" />
 	  <None Remove="Resources\Images\icon_trash_alt.png" />
@@ -65,6 +67,9 @@
 
 	<ItemGroup>
 	  <MauiXaml Update="Views\pgCadPessoaView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\pgVisualizarPessoaView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>

@@ -54,11 +54,12 @@ public partial class MainPage : ContentPage
 
     private void OnListViewItemTapped(object sender, ItemTappedEventArgs e)
     {
+        /*
         //Sender = componente
         //e = valor no caso o item
 
         //valida se o item da lista é do tipo Pessoa
-        if (e.Item is Pessoa pessoa)
+        if (sender is ListView list && e.Item is Pessoa pessoa)
         {
             string mensagem = 
                 "Registro: " + pessoa.Id.ToString() + Environment.NewLine +
@@ -72,6 +73,8 @@ public partial class MainPage : ContentPage
         //Preciso informar o tipo do componente do sender
         //para acessar as prioridades
         ((ListView)sender).SelectedItem = null; 
+        */
+        
     }
 
     private async void btnDeletar_Clicked(object sender, EventArgs e)
@@ -102,6 +105,31 @@ public partial class MainPage : ContentPage
     private void btnAtualizar_Clicked(object sender, EventArgs e)
     {
         AtualizarListView();
+    }
+
+    private async void tapDeletar_Tapped(object sender, TappedEventArgs e)
+    {
+        TappedEventArgs tapped = (TappedEventArgs)e;
+        if (tapped.Parameter is Pessoa item)
+        {
+            bool validacao = await DisplayAlert("Confirmação", "Você deseja realmente excluir este item?", "Sim", "Cancelar");
+            if (validacao)
+            {
+                // Implemente aqui a lógica para excluir o item da lista.
+                // Por exemplo, remova-o da fonte de dados da lista e atualize a ListView.
+                pessoaController.Delete(item);
+                AtualizarListView(); // Atualize a ListView após a exclusão.
+            }
+        }
+    }
+
+    private void tapVisualizar_Tapped(object sender, TappedEventArgs e)
+    {
+        TappedEventArgs tapped = (TappedEventArgs)e;
+        if (tapped.Parameter is Pessoa item)
+        {
+            Application.Current.MainPage.Navigation.PushAsync(new pgVisualizarPessoaView(item));
+        }
     }
 }
 

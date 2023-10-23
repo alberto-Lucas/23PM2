@@ -13,7 +13,7 @@ namespace AppListView.Models
         public string Nome { get; set; }
         public string Idade { get; set; }
 
-        public string urlIconTrash = "icon_trash.png";
+        //public string urlIconTrash = "icon_trash.png";
 
     }
 }
