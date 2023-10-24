@@ -1,5 +1,6 @@
 using AppCadastro.Models;
 using AppCadastro.Controllers;
+using AppCadastro.Services;
 
 namespace AppCadastro.Views;
 
@@ -11,6 +12,8 @@ public partial class pgCadBrinquedo : ContentPage
 	//Criar instancia da classe controller
 	private BrinquedoController brinquedoController = 
 		new BrinquedoController();
+
+	private string sImagemSelecionada;
 
 	public pgCadBrinquedo()
 	{
@@ -45,6 +48,11 @@ public partial class pgCadBrinquedo : ContentPage
 			brinquedo.IdadeMinima	= idadeMinima;
 			brinquedo.Preco			= preco;
 
+			//Chamar metodo para copiar a imagem para dentro da pasta do
+			//do aplicativo, e retorno o novo diretorio
+			brinquedo.DirImagem =
+				ImageService.CopiarImagemDirApp(sImagemSelecionada);
+
 			if (brinquedoController.Insert(brinquedo))
 			{
 				DisplayAlert("Informção",
@@ -56,6 +64,8 @@ public partial class pgCadBrinquedo : ContentPage
 				txtCategoria.Text = string.Empty;
 				txtIdadeMinima.Text = string.Empty;
 				txtPreco.Text = string.Empty;
+				sImagemSelecionada = string.Empty;
+				RemoverIamagem();
 			}
 			else
 				DisplayAlert("Erro",
@@ -73,4 +83,22 @@ public partial class pgCadBrinquedo : ContentPage
     {
 		await Application.Current.MainPage.Navigation.PopAsync();
     }
+
+    private async void btnAdicionarImagem_Clicked(object sender, EventArgs e)
+    {
+		sImagemSelecionada = await ImageService.SelecionarImagem();
+		imgCadastro.Source = sImagemSelecionada;
+		btnRemoverImagem.IsVisible = true;
+    }
+
+    private void btnRemoverImagem_Clicked(object sender, EventArgs e)
+    {
+		RemoverIamagem();
+    }
+
+	private void RemoverIamagem()
+	{
+		imgCadastro.Source = "";
+		btnRemoverImagem.IsVisible = false;
+	}
 }

@@ -8,5 +8,6 @@ public partial class pgVisualizarBrinquedo : ContentPage
 	{
 		InitializeComponent();
 		lblDescricao.Text = brinquedo.Descricao;
+		imgCadastro.Source = brinquedo.DirImagem;
 	}
 }

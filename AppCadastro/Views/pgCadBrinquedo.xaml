@@ -3,37 +3,53 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCadastro.Views.pgCadBrinquedo"
              Title="pgCadBrinquedo">
-    <StackLayout Padding="5">
-        <Button Text="Voltar"
-                Clicked="btnVoltar_Clicked"
-                FontSize="20"/>
+    <ScrollView>
+        <StackLayout Padding="5">
+            <Button Text="Voltar"
+                    Clicked="btnVoltar_Clicked"
+                    FontSize="20"/>
 
-        <StackLayout>
-            <Entry Placeholder="Código de Barras"
-                   x:Name="txtCodigoBarras"
-                   ClearButtonVisibility="WhileEditing"/>
+            <StackLayout Padding="5">
+                <Entry Placeholder="Código de Barras"
+                       x:Name="txtCodigoBarras"
+                       ClearButtonVisibility="WhileEditing"/>
             
-            <Entry Placeholder="Descrição"
-                   x:Name="txtDescricao"
-                   ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Descrição"
+                       x:Name="txtDescricao"
+                       ClearButtonVisibility="WhileEditing"/>
             
-            <Entry Placeholder="Categoria"
-                   x:Name="txtCategoria"
-                   ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Categoria"
+                       x:Name="txtCategoria"
+                       ClearButtonVisibility="WhileEditing"/>
             
-            <Entry Placeholder="Idade Minima"
-                   x:Name="txtIdadeMinima"
-                   ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Idade Minima"
+                       x:Name="txtIdadeMinima"
+                       ClearButtonVisibility="WhileEditing"/>
             
-            <Entry Placeholder="Preço"
-                   x:Name="txtPreco"
-                   ClearButtonVisibility="WhileEditing"/>
+                <Entry Placeholder="Preço"
+                       x:Name="txtPreco"
+                       ClearButtonVisibility="WhileEditing"/>
 
-            <Button Text="Salvar"
-                    Clicked="btnSalvar_Clicked"
-                    FontSize="20"
-                    BackgroundColor="#333"
-                    TextColor="White"/>
+                <Button Text="Adicionar Imagem"
+                        Clicked="btnAdicionarImagem_Clicked"/>
+
+                <Button Text="Remover Imagem"
+                        Clicked="btnRemoverImagem_Clicked"
+                        IsVisible="False"
+                        x:Name="btnRemoverImagem"/>
+
+                <Image x:Name="imgCadastro"
+                       MaximumHeightRequest="300"
+                       MaximumWidthRequest="300"
+                       HorizontalOptions="Center"
+                       VerticalOptions="Center"/>
+
+                <Button Text="Salvar"
+                        Clicked="btnSalvar_Clicked"
+                        FontSize="20"
+                        BackgroundColor="#333"
+                        TextColor="White"/>
+            </StackLayout>
         </StackLayout>
-    </StackLayout>
+    </ScrollView>
 </ContentPage>
