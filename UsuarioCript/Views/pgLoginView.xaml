@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsuarioCript.Views.pgLoginView"
+             Title="pgLoginView">
+    <StackLayout Padding="20" VerticalOptions="Center">
+
+        <Frame CornerRadius="10" BackgroundColor="#252526">
+            <StackLayout>
+
+                <Label Text="Login"
+                       HorizontalTextAlignment="Center"
+                       FontSize="30"
+                       TextColor="White">
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="tapBurlar_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+
+                <Entry Placeholder="Email"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       x:Name="txtEmail"/>
+
+                <Entry Placeholder="Senha"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       x:Name="txtSenha"
+                       IsPassword="True"/>
+
+                <!--Criado StackLayout horizontral para organizar os componentes
+                    o componente CheckBox possui somente a caixa de marcação não sendo possivel exibir um texto
+                    para isso é utilizado o stacklayout para adicionar uma label ao lado da caixa, 
+                    dando a aparencia de um chackbox comum-->
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                              Color="#007ACC"
+                              CheckedChanged="ckbMostrarSenha_CheckdChanged"/>
+                    <Label Text="Mostrar senha" 
+                               HorizontalTextAlignment="Start" 
+                               VerticalTextAlignment="Center"
+                               TextColor="White">
+                        <!--GestureRecognizers responsavel por reconhecer toques ou clique na telas, 
+                            em componentes que não sejam do tipo button-->
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="tapMostraSenha_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Button Text="Entrar"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontSize="20"
+                        BackgroundColor="#007ACC"
+                        Clicked="btnEntrar_Clicked"/>
+
+                <Label HorizontalOptions="Center" TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <!--Span é utilizado para exibir um bloco de informações 
+                                e possibilitar a personalização de parte do texto-->
+                            <Span Text="Não possui uma conta? "/>
+                            <Span Text="Cadastre-se "
+                                  FontAttributes="Bold"
+                                  TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="tapCadastrar_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>

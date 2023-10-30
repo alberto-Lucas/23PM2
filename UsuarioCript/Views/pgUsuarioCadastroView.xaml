@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="UsuarioCript.Views.pgUsuarioCadastroView"
+             Title="pgUsuarioCadastroView">
+    <StackLayout Padding="20" VerticalOptions="Center">
+
+        <Button Text="Voltar"
+                    Clicked="btnVoltar_Clicked"
+                    FontSize="20"/>
+        
+        <!--Segue comentarios na LoginView-->
+        <Frame CornerRadius="10" BackgroundColor="#252526">
+            <StackLayout>
+
+                <Label Text="Cadastrar"
+                           HorizontalTextAlignment="Center"
+                           FontSize="30"
+                           TextColor="White"
+                       x:Name="txtTitulo"/>
+
+                <Entry Placeholder="Nome"
+                           TextColor="White"
+                           PlaceholderColor="White"
+                           x:Name="txtNome"/>
+
+                <Entry Placeholder="Email"
+                           TextColor="White"
+                           PlaceholderColor="White"
+                           x:Name="txtEmail"/>
+
+                <Entry Placeholder="Senha"
+                           TextColor="White"
+                           PlaceholderColor="White"
+                           x:Name="txtSenha"
+                           IsPassword="True"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                                  Color="#007ACC"
+                              CheckedChanged="ckbMostrarSenha_CheckdChanged"/>
+                    <Label Text="Mostrar senha" 
+                               HorizontalTextAlignment="Start" 
+                               VerticalTextAlignment="Center"
+                               TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="tapMostraSenha_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Button Text="Salvar"
+                            TextColor="White"
+                            CornerRadius="10"
+                            FontSize="20"
+                            BackgroundColor="#007ACC"
+                        x:Name="btnSalvar"
+                            Clicked="btnSalvar_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
