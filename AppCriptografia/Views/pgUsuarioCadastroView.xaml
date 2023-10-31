@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCriptografia.Views.pgUsuarioCadastroView"
+             Title="pgUsuarioCadastroView">
+    <StackLayout Padding="20"
+                 VerticalOptions="Center">
+        <Button Text="Voltar"
+                Clicked="btnVoltar"
+                FontSize="20"/>
+
+        <Frame CornerRadius="10"
+               BackgroundColor="#252526">
+            <StackLayout>
+                <Label Text="Titulo"
+                       HorizontalTextAlignment="Center"
+                       FontSize="30"
+                       TextColor="White"
+                       x:Name="txtTitulo"/>
+
+                <Entry  Placeholder="Nome"
+                        PlaceholderColor="White"
+                        TextColor="White"
+                        x:Name="txtNome"/>
+
+                <Entry  Placeholder="Email"
+                        PlaceholderColor="White"
+                        TextColor="White"
+                        x:Name="txtEmail"/>
+
+                <Entry  Placeholder="Senha"
+                        PlaceholderColor="White"
+                        TextColor="White"
+                        x:Name="txtSenha"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                              Color="Blue"
+                              CheckedChanged="ckbMostrarSenha_Checked"/>
+                    <Label Text="Mostra Senha"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="tapMostraSenha"/>
+                        </Label.GestureRecognizers>                        
+                    </Label>
+                </StackLayout>
+
+                <Button Text="Salvar"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontSize="20"
+                        BackgroundColor="Blue"
+                        x:Name="btnSalvar"
+                        Clicked="btnSalvar_Clicked"/>
+            </StackLayout>
+        </Frame>
+    </StackLayout>
+</ContentPage>
