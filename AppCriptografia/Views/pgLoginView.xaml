@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCriptografia.Views.pgLoginView"
+             Title="pgLoginView">
+    <StackLayout Padding="20" 
+                 VerticalOptions="Center">
+        <Frame CornerRadius="10"
+               BackgroundColor="#252526">
+            <StackLayout>
+                <Label Text="Login"
+                       HorizontalTextAlignment="Center"
+                       FontSize="30"
+                       TextColor="White"/>
+
+                <Entry x:Name="txtEmail"
+                       Placeholder="Email"
+                       TextColor="White"
+                       PlaceholderColor="White"/>
+
+
+                <Entry x:Name="txtSenha"
+                       Placeholder="Senha"
+                       TextColor="White"
+                       PlaceholderColor="White"
+                       IsPassword="True"/>
+
+                <StackLayout Orientation="Horizontal">
+                    <CheckBox x:Name="ckbMostrarSenha"
+                              Color="Blue"
+                              CheckedChanged="ckbMostrarSenha_CheckedChanged"/>
+                    <Label Text="Mostrar Senha"
+                           HorizontalTextAlignment="Start"
+                           VerticalTextAlignment="Center"
+                           TextColor="White">
+                        <Label.GestureRecognizers>
+                            <TapGestureRecognizer Tapped="tapMostrarSenha_Tapped"/>
+                        </Label.GestureRecognizers>
+                    </Label>
+                </StackLayout>
+
+                <Button x:Name="btnEntrar"
+                        Text="Entrar"
+                        TextColor="White"
+                        CornerRadius="10"
+                        FontSize="20"
+                        BackgroundColor="Blue"
+                        Clicked="btnEntrar_Clicked"/>
+
+                <Label HorizontalOptions="Center"
+                       TextColor="White">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span Text="Não possui uma conta?"/>
+                            <Span Text="Cadastre-se"
+                                  FontAttributes="Bold"
+                                  TextDecorations="Underline"/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Tapped="tapCadastrar_Tapped"/>
+                    </Label.GestureRecognizers>
+                </Label>
+            </StackLayout>        
+        </Frame>
+    </StackLayout>
+</ContentPage>

@@ -51,7 +51,7 @@
 	<ItemGroup>
 	  <None Remove="Resources\Images\icon_deletar.png" />
 	  <None Remove="Resources\Images\icon_editar.png" />
-	  <None Remove="Resources\Images\icon_visualizr.png" />
+	  <None Remove="Resources\Images\icon_visualizar.png" />
 	</ItemGroup>
 
 	<ItemGroup>
@@ -61,6 +61,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="Views\pgLoginView.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="Views\pgUsuarioCadastroView.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>

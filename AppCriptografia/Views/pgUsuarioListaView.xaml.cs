@@ -22,7 +22,7 @@ public partial class pgUsuarioListaView : ContentPage
 
     private void btnCadastrar(object sender, EventArgs e)
     {
-        ChamarTelaCadastro(AcaoTelaService.Inserir, null);
+        
     }
 
     private void btnAtualizar(object sender, EventArgs e)
@@ -78,5 +78,10 @@ public partial class pgUsuarioListaView : ContentPage
     {
         TappedChamarTelaCadastro(
                     sender, e, AcaoTelaService.Alterar);
+    }
+
+    private void btnCadastrar_Clicked(object sender, EventArgs e)
+    {
+        ChamarTelaCadastro(AcaoTelaService.Inserir, null);
     }
 }

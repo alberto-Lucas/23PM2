@@ -31,7 +31,8 @@
                 <Entry  Placeholder="Senha"
                         PlaceholderColor="White"
                         TextColor="White"
-                        x:Name="txtSenha"/>
+                        x:Name="txtSenha"
+                        IsPassword="True"/>
 
                 <StackLayout Orientation="Horizontal">
                     <CheckBox x:Name="ckbMostrarSenha"

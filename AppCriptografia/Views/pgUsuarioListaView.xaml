@@ -11,12 +11,12 @@
         </StackLayout>
 
         <StackLayout>
-            <Button x:Name="btnCadastrar"
+            <Button x:Name="btnCadastrar2"
                     Text="Cadastrar"
                     BackgroundColor="#333"
                     FontSize="20"
                     TextColor="White"
-                    Clicked="btnCadastrar"/>
+                    Clicked="btnCadastrar_Clicked"/>
 
             <Button x:Name="btnAualizar"
                     Text="Atualizar"
@@ -33,7 +33,8 @@
                         <Frame CornerRadius="10"
                                Padding="10"
                                Margin="5"
-                               BackgroundColor="#414142">
+                               BackgroundColor="#414142"
+                               MinimumHeightRequest="50">
                             <StackLayout Orientation="Horizontal">
                                 <StackLayout HorizontalOptions="FillAndExpand">
                                     <StackLayout Orientation="Horizontal">
