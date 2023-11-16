@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRevisao.Views.pgJogosListaView"
+             Title="pgJogosListaView">
+    <StackLayout Padding="5">
+        <StackLayout HorizontalOptions="Center"
+                     Margin="0, 10">
+            <Label Text="Jogos"
+                   FontSize="25"/>
+        </StackLayout>
+
+        <StackLayout>
+            <Button x:Name="btnCadastrar2"
+                    Text="Cadastrar"
+                    BackgroundColor="#333"
+                    FontSize="20"
+                    TextColor="White"
+                    Clicked="btnCadastrar_Clicked"/>
+
+            <Button x:Name="btnAualizar"
+                    Text="Atualizar"
+                    BackgroundColor="Purple"
+                    FontSize="20"
+                    TextColor="White"
+                    Clicked="btnAtualizar_Clicked"/>
+        </StackLayout>
+
+        <ListView x:Name="lstJogos">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Frame CornerRadius="10"
+                               Padding="10"
+                               Margin="5"
+                               BackgroundColor="#414142"
+                               MinimumHeightRequest="50">
+                            <StackLayout Orientation="Horizontal">
+                                <StackLayout HorizontalOptions="FillAndExpand">
+                                    <Label Text="{Binding JogosID}"
+                                               FontAttributes="Bold"
+                                               FontSize="20"/>
+                                    <Label Text="{Binding Bixo}"
+                                               FontAttributes="Bold"
+                                               FontSize="20"/>
+                                    <Label Text="{Binding Numero}"
+                                               FontSize="20"/>
+                                    <Label Text="{Binding Jogador}"
+                                               FontSize="20"/>
+                                </StackLayout>
+                                <StackLayout HorizontalOptions="End"
+                                             VerticalOptions="Start"
+                                             Orientation="Horizontal">
+                                    <Image Source="icon_deletar.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30"
+                                           Margin="5, 0">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="tapDeletar"
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Image Source="icon_visualizar.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30"
+                                           Margin="5, 0">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="tapVisualizar"
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+
+                                    <Image Source="icon_editar.png"
+                                           HeightRequest="30"
+                                           WidthRequest="30"
+                                           Margin="5, 0">
+                                        <Image.GestureRecognizers>
+                                            <TapGestureRecognizer Tapped="tapEditar"
+                                                                  CommandParameter="{Binding .}"/>
+                                        </Image.GestureRecognizers>
+                                    </Image>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>

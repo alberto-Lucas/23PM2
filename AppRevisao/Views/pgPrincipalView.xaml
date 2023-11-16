@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Shell xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppRevisao.Views.pgPrincipalView"
+             Title="pgPrincipalView"
+             Shell.TabBarIsVisible="False"
+             Shell.BackgroundColor="Red"
+             Shell.TitleColor="Green"
+             Shell.ForegroundColor="Yellow"
+             Shell.NavBarIsVisible="False"
+             xmlns:views="clr-namespace:AppRevisao.Views">    
+    <FlyoutItem Route="principal"
+                FlyoutDisplayOptions="AsMultipleItems">
+        <ShellContent Title="Principal"
+                      ContentTemplate=
+                      "{DataTemplate views:pgPrincipalView}"
+                      Icon="iconhome.png"/>
+        <ShellContent Title="Jogos"
+                      ContentTemplate=
+                      "{DataTemplate views:pgJogosListaView}"/>
+    </FlyoutItem>
+</Shell>
